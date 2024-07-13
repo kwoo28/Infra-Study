@@ -1,3 +1,12 @@
 spring:
   application:
     name: Service_API
+
+  flyway:
+    enabled: true
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://15.164.72.209:3306/service?characterEncoding=utf8&useUnicode=true&mysqlEncoding=utf8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+    username: root
+    password: ''
