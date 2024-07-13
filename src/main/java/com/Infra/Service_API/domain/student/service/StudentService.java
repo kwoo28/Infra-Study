@@ -3,7 +3,9 @@ package com.Infra.Service_API.domain.student.service;
 import com.Infra.Service_API.domain.student.dto.StudentResponse;
 import com.Infra.Service_API.domain.student.repository.StudentRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
+@Service
 @RequiredArgsConstructor
 public class StudentService {
 
