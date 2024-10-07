@@ -1,13 +1,25 @@
 package com.Infra.Service_API.domain.student.repository;
 
 import com.Infra.Service_API.domain.student.model.Student;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
-public interface StudentRepository extends CrudRepository<Student, Integer> {
+@Repository
+public class StudentRepository{
 
-    Student save(Student student);
+    private final List<Student> students = new ArrayList<>();
 
-    Optional<Student> findById(Integer studentId);
+    Student save(Student student)
+    {
+        students.add(student);
+        return student;
+    };
+
+    public Optional<Student> findById(Integer studentId)
+    {
+        return students.stream().filter(student -> student.getId().equals(studentId)).findFirst();
+    }
 }

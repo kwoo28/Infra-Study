@@ -2,14 +2,5 @@ spring:
   application:
     name: Service_API
 
-  flyway:
-    enabled: true
-
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://15.164.72.209:3306/service?characterEncoding=utf8&useUnicode=true&mysqlEncoding=utf8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
-    username: root
-    password: ''
-
 swagger:
-  server-url: http://211.231.14.233:8080
+  server-url: http://43.201.6.208:8080
